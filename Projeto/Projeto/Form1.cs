@@ -38,49 +38,17 @@ namespace Projeto
             }
         }
 
-        private void txbPartidas_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxAberta_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbtFechadas_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnCriarPartida_Click(object sender, EventArgs e)
         {
             string senha = txbNomePartida.Text;
             string nome = txbSenhaPartida.Text;
 
-            lblIdPartida.Text = Jogo.CriarPartida(nome, senha);
+            txbIdPartida.Text = Jogo.CriarPartida(nome, senha);
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnListarJogadores_Click(object sender, EventArgs e)
         {
@@ -88,54 +56,69 @@ namespace Projeto
             txbListarJogadores.Text = Jogo.ListarJogadores(idPartida);
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnEntrarPartida_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txbId.Text);
+            int id = Convert.ToInt32(txbIdPartida.Text);
             string senha = txbSenha.Text;
-            string nome = txbNome.Text;
+            string nome = txbNomeJogador.Text;
 
-            lblInfoJogador.Text = Jogo.EntrarPartida(id, nome, senha); 
+            string[] jogador = Jogo.EntrarPartida(id, nome, senha).Split(',');
 
-        }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblInfoJogador_Click(object sender, EventArgs e)
-        {
+            lblIdJogador.Text = jogador[0];
+            lblSenhaJogador.Text = jogador[1];
+            lblCorJogador.Text = jogador[2];
 
         }
+
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             txbRef.Text = Jogo.IniciarPartida(Convert.ToInt32(txbIdJogadorInit.Text), txbSenhaJogadorInit.Text);
         }
 
-        private void label9_Click(object sender, EventArgs e)
+       
+        private void BtnMostra_Click(object sender, EventArgs e)
+        {
+            int id =  Convert.ToInt32(lblIdJogador.Text);
+            string senha = lblSenhaJogador.Text;
+            lblMostraMao.Text = Jogo.ConsultarMao(id, senha);
+        }
+
+        private void BtnExibirTab_Click(object sender, EventArgs e)
+        {
+            lblExibirTabuleiro.Text = Jogo.ExibirTabuleiro(Convert.ToInt32(txbIdPartida.Text));
+        }
+
+        private void ButJogar_Click(object sender, EventArgs e)
+        {
+            int idJogador = Convert.ToInt32(lblIdJogador.Text);
+            string senhaJogador = lblSenhaJogador.Text;
+            string carta = txbCarta.Text;
+            int posicao = Convert.ToInt32(txbPosicao.Text);
+
+            if (rbtFrente.Checked) Jogo.Jogar(idJogador, senhaJogador, posicao, carta);
+            else if (rbtVolta.Checked) Jogo.Jogar(idJogador, senhaJogador, posicao);
+            else if (rbtPassa.Checked) Jogo.Jogar(idJogador, senhaJogador);
+
+
+            
+           
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ButTemp_Click(object sender, EventArgs e)
+        {
+            int idPart = Convert.ToInt32(txbIdPartida.Text);
+
+            txbRef.Text = Jogo.VerificarVez(idPart);
         }
     }
 }
