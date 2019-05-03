@@ -1,0 +1,13 @@
+C:\Users\Public\Documents\Senac\PI\Func\PI_2604\PI_2604\bin\Debug\PI_2604.exe.config
+C:\Users\Public\Documents\Senac\PI\Func\PI_2604\PI_2604\bin\Debug\PI_2604.exe
+C:\Users\Public\Documents\Senac\PI\Func\PI_2604\PI_2604\bin\Debug\PI_2604.pdb
+C:\Users\Public\Documents\Senac\PI\Func\PI_2604\PI_2604\bin\Debug\CartagenaServer.dll
+C:\Users\Public\Documents\Senac\PI\Func\PI_2604\PI_2604\obj\Debug\PI_2604.csprojAssemblyReference.cache
+C:\Users\Public\Documents\Senac\PI\Func\PI_2604\PI_2604\obj\Debug\PI_2604.Properties.Resources.resources
+C:\Users\Public\Documents\Senac\PI\Func\PI_2604\PI_2604\obj\Debug\PI_2604.csproj.GenerateResource.cache
+C:\Users\Public\Documents\Senac\PI\Func\PI_2604\PI_2604\obj\Debug\PI_2604.csproj.CoreCompileInputs.cache
+C:\Users\Public\Documents\Senac\PI\Func\PI_2604\PI_2604\obj\Debug\PI_2604.csproj.CopyComplete
+C:\Users\Public\Documents\Senac\PI\Func\PI_2604\PI_2604\obj\Debug\PI_2604.exe
+C:\Users\Public\Documents\Senac\PI\Func\PI_2604\PI_2604\obj\Debug\PI_2604.pdb
+C:\Users\Public\Documents\Senac\PI\Func\PI_2604\PI_2604\obj\Debug\PI_2604.Tela1.resources
+C:\Users\Public\Documents\Senac\PI\Func\PI_2604\PI_2604\obj\Debug\PI_2604.Tela2.resources
